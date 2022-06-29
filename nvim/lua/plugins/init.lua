@@ -1,16 +1,14 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 local packer_booststrap = nil
-print(fn.empty(fn.glob(install_path)))
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
 
-
 local dirUtil = require('utils.dir')
 
-require('packer').startup(function(use)
+require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	local path = vim.fn.stdpath('config')
 	dirUtil.DirMapping(
