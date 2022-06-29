@@ -5,18 +5,26 @@ if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
-return require('packer').startup(function(use)
-		-- My plugins here
-		-- use 'foo1/bar1.nvim'
-		-- use 'foo2/bar2.nvim'
-		use {'wbthomason/packer.nvim',config = }
-		use 'kyazdani42/nvim-web-devicons'
-		use 'romgrk/barbar.nvim'
-		use 'kyazdani42/nvim-tree.lua'
 
-		-- Automatically set up your configuration after cloning packer.nvim
-		-- Put this at the end after all plugins
-		if packer_bootstrap then
-				require('packer').sync()
+
+local dirUtil = require('utils.dir')
+
+require('packer').startup(function(use)
+	local path = vim.fn.stdpath('config')
+	dirUtil.DirMapping(
+		path..'/lua/plugins/configs/',
+		function(value)
+			return string.sub(value,-4) == '.lua' 
+		end,
+		function(value)
+			local module_name = string.match(value,'(.*).lua')
+			require('plugins.configs.'..module_name).RegisterPlugin(use)
+		end,
+		function()
+			print('error')
 		end
+	)
+	if packer_bootstrap then
+		require('packer').sync()
+	end
 end)
