@@ -14,9 +14,6 @@ require('packer').startup(function()
 	local configs = require('plugins.configs')
 	for _,plugin in pairs(configs['Plugins_list']) do
 		plugin.RegisterPlugin(use)
-	end
-	for _,plugin in pairs(configs['Plugins_list']) do
-		print(_)
 		plugin.setup()
 	end
 	-- dirUtil.DirMapping(

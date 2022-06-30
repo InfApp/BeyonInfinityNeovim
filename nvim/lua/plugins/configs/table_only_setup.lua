@@ -6,14 +6,14 @@ local Plugins = {
 		repo = 'nvim-lua/plenary.nvim',
 		module_name = 'plenary'
 	},
-	nvim_notify={ 
-		repo = 'rcarriga/nvim-notify',
-		module_name = 'notify'
-	},
 	monokai={ 
 		repo = 'tanvirtin/monokai.nvim',
 		module_name = 'monokai',
 		setup = true
+	},
+	seoul256={
+		repo = 'shaunsingh/seoul256.nvim',
+		module_name = '',
 	},
 	lualine={ 
 		repo = 'nvim-lualine/lualine.nvim',
@@ -28,12 +28,15 @@ local Plugins = {
 		repo = 'kyazdani42/nvim-web-devicons',
 		module_name = '',
 	},
+	command_pallete={ 
+		repo = 'InfApp/command_pallete.nvim',
+		module_name = '',
+	},
 	
 }
 
 M.setup = function()
 	for _,value in pairs(Plugins) do
-		print(_)
 		local opts = nil
 		if type(value['opts']) == 'function' then
 			opts = value['opts']()

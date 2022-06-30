@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "C:\\Users\\VU8A6A~1.NGU\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?.lua;C:\\Users\\VU8A6A~1.NGU\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\VU8A6A~1.NGU\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\VU8A6A~1.NGU\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\VU8A6A~1.NGU\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\lua\\5.1\\?.so"
+local package_path_str = "C:\\Users\\rockm\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?.lua;C:\\Users\\rockm\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\rockm\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\rockm\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
+local install_cpath_pattern = "C:\\Users\\rockm\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\lua\\5.1\\?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,52 +71,57 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["barbar.nvim"] = {
     loaded = true,
-    path = "F:\\vu.nguyenhoang\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\barbar.nvim",
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "F:\\vu.nguyenhoang\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["monokai.nvim"] = {
     loaded = true,
-    path = "F:\\vu.nguyenhoang\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\monokai.nvim",
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\monokai.nvim",
     url = "https://github.com/tanvirtin/monokai.nvim"
   },
   ["nvim-notify"] = {
     loaded = true,
-    path = "F:\\vu.nguyenhoang\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\nvim-notify",
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\nvim-notify",
     url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "F:\\vu.nguyenhoang\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "F:\\vu.nguyenhoang\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "F:\\vu.nguyenhoang\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "F:\\vu.nguyenhoang\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["seoul256.nvim"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\seoul256.nvim",
+    url = "https://github.com/shaunsingh/seoul256.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
-    path = "F:\\vu.nguyenhoang\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\telescope-fzf-native.nvim",
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "F:\\vu.nguyenhoang\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
