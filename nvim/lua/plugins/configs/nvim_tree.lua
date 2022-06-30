@@ -1,9 +1,9 @@
 local M = {}
 
-M.RegisterPlugin = function(use)
-	use ({'kyazdani42/nvim-tree.lua',
-	config  = function()		
-		require('nvim-tree').setup({
+M.setup = function ()
+	local result, value = pcall(require,'nvim-tree')
+	if result then
+		value.setup({
 			filters = {
 				dotfiles = false,
 			},
@@ -22,7 +22,7 @@ M.RegisterPlugin = function(use)
 				side = "left",
 				width = 25,
 				hide_root_folder = true,
-			     },
+				 },
 			git = {
 				enable = false,
 				ignore = true,
@@ -36,16 +36,16 @@ M.RegisterPlugin = function(use)
 				},
 				icons = {
 				   show = {
-				      file = true,
-				      folder = true,
-				      folder_arrow = true,
-				      git = true,
+					  file = true,
+					  folder = true,
+					  folder_arrow = true,
+					  git = true,
 				   },
 			  
 				   glyphs = {
-				      default = "",
-				      symlink = "",
-				      folder = {
+					  default = "",
+					  symlink = "",
+					  folder = {
 					 default = "",
 					 empty = "",
 					 empty_open = "",
@@ -54,8 +54,8 @@ M.RegisterPlugin = function(use)
 					 symlink_open = "",
 					 arrow_open = "",
 					 arrow_closed = "",
-				      },
-				      git = {
+					  },
+					  git = {
 					 unstaged = "✗",
 					 staged = "✓",
 					 unmerged = "",
@@ -63,18 +63,15 @@ M.RegisterPlugin = function(use)
 					 untracked = "★",
 					 deleted = "",
 					 ignored = "◌",
-				      },
+					  },
 				   },
 				},
 			},
 		})
-		vim.keymap.set({'i','n'},'<c-b>',
-			function()
-				require('nvim-tree').toggle(false,true)
-			end,
-			{silent = true,desc= "open nvim-tree"}
-		)
 	end
-	})
+end
+
+M.RegisterPlugin = function(use)
+	use ('kyazdani42/nvim-tree.lua')
 end
 return M

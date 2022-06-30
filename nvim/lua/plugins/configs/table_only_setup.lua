@@ -4,7 +4,7 @@ local M = {}
 local Plugins = {
 	plenary = {
 		repo = 'nvim-lua/plenary.nvim',
-		module_name = 'plenary'		
+		module_name = 'plenary'
 	},
 	nvim_notify={ 
 		repo = 'rcarriga/nvim-notify',
@@ -13,7 +13,7 @@ local Plugins = {
 	monokai={ 
 		repo = 'tanvirtin/monokai.nvim',
 		module_name = 'monokai',
-		opts = { palette = require('monokai').ristretto }
+		setup = true
 	},
 	lualine={ 
 		repo = 'nvim-lualine/lualine.nvim',
@@ -31,12 +31,24 @@ local Plugins = {
 	
 }
 
+M.setup = function()
+	for _,value in pairs(Plugins) do
+		print(_)
+		local opts = nil
+		if type(value['opts']) == 'function' then
+			opts = value['opts']()
+		elseif type(value['opts']) =='table' then
+			opts = value['opts']
+		end
+		if setup == true or opts then
+			require(value['module_name']).setup(opts)
+		end
+	end
+end
+
 M.RegisterPlugin = function(use)
 	for _,value in pairs(Plugins) do
 		local config = nil
-		if value['setup'] or value['opts'] ~= nil then
-			config = require(value['module_name']).setup(value['opts'])
-		end
 		use({value['repo'],config=config})
 	end
 end
