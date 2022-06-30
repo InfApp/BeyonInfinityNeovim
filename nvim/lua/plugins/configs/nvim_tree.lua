@@ -24,8 +24,8 @@ M.setup = function ()
 				hide_root_folder = true,
 				 },
 			git = {
-				enable = false,
-				ignore = true,
+				enable = true,
+				ignore = false,
 			},
 			renderer = {
 				highlight_git = false,
