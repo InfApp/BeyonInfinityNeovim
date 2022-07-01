@@ -69,10 +69,70 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["command_pallete.nvim"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\command_pallete.nvim",
+    url = "https://github.com/InfApp/command_pallete.nvim"
+  },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
+  ["fine-cmdline.nvim"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\fine-cmdline.nvim",
+    url = "https://github.com/VonHeikemen/fine-cmdline.nvim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["gruvbox-flat.nvim"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\gruvbox-flat.nvim",
+    url = "https://github.com/eddyekofo94/gruvbox-flat.nvim"
+  },
+  ["lsp-zero.nvim"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
+    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -83,6 +143,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\monokai.nvim",
     url = "https://github.com/tanvirtin/monokai.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "D:\\repos\\BeyonInfinityNeovim\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-notify"] = {
     loaded = true,
