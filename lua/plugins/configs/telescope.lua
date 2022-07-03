@@ -44,7 +44,6 @@ M.setup = function ()
 				-- the default case_mode is "smart_case"
 			},
 			notify = {},
-			command_pallete= {}
 		}
 	}
 	telescope.setup(opts)
