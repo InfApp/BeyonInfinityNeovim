@@ -50,36 +50,10 @@ local Plugins = {
 		repo = 'VonHeikemen/fine-cmdline.nvim',
 		module_name = '',
 	},
-	dressing={ 
-		repo = 'stevearc/dressing.nvim',
-		module_name = 'dressing',
-		opts = {
-			input = {
-				    enabled = true,
-				    default_prompt = "Input:",
-				    prompt_align = "left",
-				    insert_only = true,
-				    anchor = "SW",
-				    border = "rounded",
-				    relative = "cursor",
-				    prefer_width = 40,
-				    width = nil,
-				    max_width = { 140, 0.9 },
-				    min_width = { 20, 0.2 },
-				    winblend = 10,
-				    winhighlight = "",
-				    override = function(conf)
-				      return conf
-				    end,
-				    get_config = nil,
-			},
-			select = {
-				enabled = true,
-				backend = { "telescope"},
-				trim_prompt = true,
-				telescope = require('telescope.themes').get_dropdown(),
-			}
-		}
+	hop={ 
+		repo = 'phaazon/hop.nvim',
+		module_name = 'hop',
+		opts =  { keys = 'etovxqpdygfblzhckisuran' }
 	},
 	
 	

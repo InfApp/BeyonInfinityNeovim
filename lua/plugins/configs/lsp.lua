@@ -4,6 +4,7 @@ M.setup = function ()
 	local lsp = require('lsp-zero')
 	lsp.preset('recommended')
 	lsp.setup()
+	vim.keymap.set('i','<C-k>',vim.lsp.buf.hover,{silent=true})
 end
 
 M.RegisterPlugin = function(use)
