@@ -58,9 +58,18 @@ local Plugins = {
 	nightfox = {
 		repo =  "EdenEast/nightfox.nvim",
 		module_name = 'nightfox'
-	}
-	
-	
+	},
+	workspaces={
+		repo = 'natecraddock/workspaces.nvim',
+		module_name = 'workspaces',
+		setup = true,
+		opts = {
+			hooks = {
+			        open = {"Telescope find_files"},
+			},
+		}
+	},
+
 }
 
 M.setup = function()
