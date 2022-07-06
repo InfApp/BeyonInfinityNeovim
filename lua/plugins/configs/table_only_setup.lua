@@ -55,6 +55,10 @@ local Plugins = {
 		module_name = 'hop',
 		opts =  { keys = 'etovxqpdygfblzhckisuran' }
 	},
+	nightfox = {
+		repo =  "EdenEast/nightfox.nvim",
+		module_name = 'nightfox'
+	}
 	
 	
 }

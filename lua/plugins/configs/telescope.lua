@@ -15,24 +15,23 @@ M.setup = function ()
 					["<C-j>"] = actions.move_selection_next,
 				},
 			},
-			preview = false,
 			
-			file_ignore_patterns = { "node_modules" },
+			
+			file_ignore_patterns = { "node_modules",".svn" },
 			path_display = { "truncate" },
 			prompt_prefix = "   ",
       			selection_caret = "> ",
 			initial_mode = "insert",
 			color_devicons = true,
 		},
-		pickers={
-			live_grep = {
-				preview= require("telescope.previewers").vim_buffer_vimgrep.new
-			},
+		pickers={	
 			find_files={
-				theme='dropdown'
+				theme='dropdown',
+				previewer=false,
 			},
 			commands={
-				theme='dropdown'
+				theme='dropdown',
+				previewer=false,
 			},
 		},
 		extensions = {
@@ -49,12 +48,26 @@ M.setup = function ()
 	telescope.setup(opts)
 
 	for key,_ in pairs(opts['extensions']) do
-		telescope.load_extension(key)
+		pcall(telescope.load_extension,key)
 	end
+		require'nvim-treesitter.configs'.setup {
+	  -- A list of parser names, or "all"
+			ensure_installed = { "c", "lua", "rust" , "cpp"},
+			
+			  -- Install parsers synchronously (only applied to `ensure_installed`)
+			sync_install = false,
+					
+			highlight = {
+			    -- `false` will disable the whole extensions
+			    enable = true,
+		  	},
+		}
 end
 
 M.RegisterPlugin = function(use)
 	use ({'nvim-telescope/telescope.nvim'})
 	use ({'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
+	use ({'nvim-treesitter/nvim-treesitter',run = ':TSUpdate'})
+	use ('sharkdp/fd')
 end
 return M

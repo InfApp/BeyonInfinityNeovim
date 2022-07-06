@@ -1,10 +1,12 @@
 local M = {}
 
 M.setup = function ()
-	require'notify'.setup({
-		background_colour = '#DCDCDC'
-	})
-	vim.notify = require'notify'
+	local _,notify = pcall(require,'notify')
+	if not _ then
+		return
+	end
+	notify.setup()
+	vim.notify = notify 
 
 end
 

@@ -14,7 +14,7 @@ require('packer').startup(function()
 	local configs = require('plugins.configs')
 	for _,plugin in pairs(configs['Plugins_list']) do
 		plugin.RegisterPlugin(use)
-		plugin.setup()
+		pcall(plugin.setup,nil)
 	end
 	-- dirUtil.DirMapping(
 	-- 	path..'/lua/plugins/configs/',
